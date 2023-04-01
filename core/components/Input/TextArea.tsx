@@ -1,7 +1,6 @@
 import { forwardRef, useEffect, useRef } from 'react';
 
-import { clamp } from '@/utils/base';
-
+import { clamp } from '../../utils/base';
 import { BoxProps, getBoxProps } from '../Box';
 import styles from './style.module.css';
 

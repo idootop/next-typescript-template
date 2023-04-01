@@ -1,19 +1,18 @@
 import { CSSProperties, forwardRef, MouseEventHandler, ReactNode } from 'react';
 
-import { isArray } from '@/utils/is';
+import { isArray } from '../utils/is';
 
-export interface BaseStyles {
-  size?: string | number;
-}
-
-export interface BaseProps extends BaseStyles {
+export interface BaseProps {
   id?: string;
+  key?: any;
+  ref?: any;
+  className?: string | string[];
+  children?: ReactNode;
   src?: string;
   style?: CSSProperties;
   extStyle?: CSSProperties;
-  className?: string | string[];
-  children?: ReactNode;
   onClick?: MouseEventHandler | undefined;
+  size?: string | number;
 }
 
 export type BoxProps = CSSProperties & BaseProps;
@@ -21,18 +20,23 @@ export type BoxProps = CSSProperties & BaseProps;
 export const getBoxProps = (props: BoxProps) => {
   const {
     id,
-    src,
+    key: _,
+    ref: __,
+    children: ___,
     className: _class,
-    onClick,
+    src,
     style,
     extStyle = {},
+    onClick,
     size,
     ...styles
   } = props ?? {};
+
   if (size) {
     extStyle.width = size;
     extStyle.height = size;
   }
+
   const className = isArray(_class) ? (_class as any)!.join(' ') : _class;
 
   return {

@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 
-import { flattenChildren } from '@/utils/base';
-
+import { flattenChildren } from '../../utils/base';
 import { Box, BoxProps } from '../Box';
 import { PositionProps } from './position';
 

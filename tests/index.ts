@@ -1,3 +1,3 @@
-import { printf } from '@/utils/base';
+import { printf } from '@/core/utils/base';
 
 printf('Hello world!');

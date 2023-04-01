@@ -2,8 +2,7 @@
 import NextImage from 'next/image';
 import { forwardRef, ReactNode, useState } from 'react';
 
-import { isEmpty } from '@/utils/is';
-
+import { isEmpty } from '../utils/is';
 import { BoxProps, getBoxProps } from './Box';
 import { Center } from './Flex';
 

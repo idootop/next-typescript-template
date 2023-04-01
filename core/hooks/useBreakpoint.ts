@@ -1,4 +1,4 @@
-import { store, useConsumer } from '@/utils/store/useStore';
+import { store, useConsumer } from '../utils/store/useStore';
 
 const _getBreakpoint = () => {
   const width = document.body.clientWidth;
