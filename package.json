@@ -13,6 +13,7 @@
     "preview": "next build && next start"
   },
   "dependencies": {
+    "github-markdown-css": "^5.2.0",
     "next": "^13.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -37,12 +38,13 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
+    "remark-custom-heading-id": "^1.0.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": "npx eslint --cache --fix",
-    "*.{js,ts,jsx,tsx,json,md}": "npx prettier --cache --write -c"
+    "*.{js,ts,jsx,tsx,json,md,mdx}": "npx prettier --cache --write -c"
   }
 }

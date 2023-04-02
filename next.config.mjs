@@ -1,9 +1,10 @@
 import NextMDX from '@next/mdx';
+import { remarkHeadingId } from 'remark-custom-heading-id';
 
 const withMDX = NextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [],
+    remarkPlugins: [remarkHeadingId],
     rehypePlugins: [],
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",

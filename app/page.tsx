@@ -1,9 +1,5 @@
-import { Center } from '@/core/components/Flex';
+import Test from './test.mdx';
 
-export default function Home() {
-  return (
-    <Center width="100vw" height="100vh">
-      Hello world!
-    </Center>
-  );
+export default function Index() {
+  return <Test />;
 }
