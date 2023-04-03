@@ -10,7 +10,6 @@ const withMDX = NextMDX({
   options: {
     remarkPlugins: [remarkHeadingId, remarkGfm, remarkMath],
     rehypePlugins: [rehypeHighlight, rehypeKatex],
-    providerImportSource: '@mdx-js/react',
   },
 });
 
