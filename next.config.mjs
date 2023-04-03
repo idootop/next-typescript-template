@@ -1,13 +1,15 @@
 import NextMDX from '@next/mdx';
 import rehypeHighlight from 'rehype-highlight';
+import rehypeKatex from 'rehype-katex';
 import { remarkHeadingId } from 'remark-custom-heading-id';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 
 const withMDX = NextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkHeadingId, remarkGfm],
-    rehypePlugins: [rehypeHighlight],
+    remarkPlugins: [remarkHeadingId, remarkGfm, remarkMath],
+    rehypePlugins: [rehypeHighlight, rehypeKatex],
     providerImportSource: '@mdx-js/react',
   },
 });

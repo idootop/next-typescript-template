@@ -16,6 +16,9 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
+      <head>
+        <link rel="stylesheet" href="/katex/styles.css" />
+      </head>
       <body>
         <article className="markdown-body">{children}</article>
       </body>
