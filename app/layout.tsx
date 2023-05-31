@@ -1,10 +1,5 @@
 import '@/src/styles/reset.css';
 import '@/src/styles/global.css';
-// Markdown
-import '@/src/styles/markdown.css';
-import 'github-markdown-css/github-markdown-light.css';
-// Highlight
-import '@/src/styles/highlight.css';
 
 export const metadata = {
   title: 'Next typescript template',
@@ -16,12 +11,7 @@ export const metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh-CN">
-      <head>
-        <link rel="stylesheet" href="/katex/styles.css" />
-      </head>
-      <body>
-        <article className="markdown-body">{children}</article>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
