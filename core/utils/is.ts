@@ -73,10 +73,10 @@ export function isClass(e: any): boolean {
   return isFunction(e) && e.toString().startsWith('class ');
 }
 
-export function isDev(): boolean {
-  return process.env.NODE_ENV === 'development';
-}
-
 export function isBrowser() {
   return typeof window !== 'undefined';
+}
+
+export function isDev(): boolean {
+  return process.env.NODE_ENV === 'development';
 }

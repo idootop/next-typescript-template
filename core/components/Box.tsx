@@ -3,6 +3,7 @@ import { CSSProperties, forwardRef, MouseEventHandler, ReactNode } from 'react';
 import { isArray } from '../utils/is';
 
 export interface BaseProps {
+  // 基础属性
   id?: string;
   key?: any;
   ref?: any;
@@ -10,8 +11,10 @@ export interface BaseProps {
   children?: ReactNode;
   src?: string;
   style?: CSSProperties;
-  extStyle?: CSSProperties;
+
   onClick?: MouseEventHandler | undefined;
+  // 增强属性
+  extStyle?: CSSProperties;
   size?: string | number;
 }
 
